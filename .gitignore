@@ -1,0 +1,56 @@
+# Build Outputs & Binaries
+target/
+out/
+bin/
+*.class
+*.jar
+*.zip
+*.dll
+dependency-reduced-pom.xml
+
+# Runtime Data, Logs & Embedded DB
+*.log
+network-alert.log
+*.db
+*.mv.db
+*.trace.db
+data/
+data/spool/
+
+# Secrets, Certificates & Keys (ERRATA §E12)
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+*.p12
+*.jks
+*.keystore
+*.crt
+*.cer
+secrets/
+credentials/
+agent-policy.json
+!agent-policy.sample.json
+
+# IDEs, Personal Config & Scratch
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+nbactions.xml
+nbproject/private/
+.settings/
+.project
+.classpath
+scratch/
+nhiemvu/
+
+# OS specific files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Maven wrapper binary (scripts remain tracked)
+.mvn/wrapper/maven-wrapper.jar
