@@ -1,0 +1,46 @@
+{
+  "name": "Kịch bản Demo Tự Động NCAS 2.0 (ERRATA §E14.1)",
+  "description": "Kịch bản diễn tiến sự cố mạng và tự phục hồi tất định: t=0 mọi thứ OK, +30s TCP sập, +90s HTTP 500, +150s trễ 500ms, +210s hồi phục",
+  "steps": [
+    {
+      "timeOffsetSeconds": 0,
+      "name": "Mọi thứ OK",
+      "description": "Khởi chạy toàn bộ TCP, UDP, HTTP (status 200, trễ 0ms)",
+      "tcpRunning": true,
+      "tcpDelayMs": 0,
+      "httpRunning": true,
+      "httpStatusCode": 200,
+      "httpDelayMs": 0,
+      "udpRunning": true
+    },
+    {
+      "timeOffsetSeconds": 30,
+      "name": "TCP sập",
+      "description": "Ngắt kết nối Mock TCP Server (Port 9000) -> Kích hoạt cảnh báo ĐỎ",
+      "tcpRunning": false
+    },
+    {
+      "timeOffsetSeconds": 90,
+      "name": "HTTP 500",
+      "description": "Mock HTTP Server (Port 9002) trả về lỗi HTTP 500 Internal Server Error",
+      "httpStatusCode": 500
+    },
+    {
+      "timeOffsetSeconds": 150,
+      "name": "Thêm trễ 500ms",
+      "description": "Mock HTTP Server phản hồi chậm thêm 500ms (vượt ngưỡng) -> Kích hoạt cảnh báo VÀNG",
+      "httpDelayMs": 500
+    },
+    {
+      "timeOffsetSeconds": 210,
+      "name": "Hồi phục hoàn toàn",
+      "description": "Khôi phục TCP Server online, HTTP Server status 200 và độ trễ 0ms -> Toàn bộ hệ thống xanh trở lại",
+      "tcpRunning": true,
+      "tcpDelayMs": 0,
+      "httpRunning": true,
+      "httpStatusCode": 200,
+      "httpDelayMs": 0,
+      "udpRunning": true
+    }
+  ]
+}
