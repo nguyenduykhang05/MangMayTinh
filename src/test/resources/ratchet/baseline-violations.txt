@@ -1,0 +1,180 @@
+System.out/err|src/main/java/com/networkalert/DemoTcpServer.java|18|System.out.println("==================================================");
+System.out/err|src/main/java/com/networkalert/DemoTcpServer.java|19|System.out.println("   DEMO TCP SERVER CHO BÃƒâ‚¬I TÃ¡ÂºÂ¬P LÃ¡ÂºÂ¬P TRÃƒÅ’NH MÃ¡ÂºÂ NG     ");
+System.out/err|src/main/java/com/networkalert/DemoTcpServer.java|20|System.out.println("   Ã„Âang lÃ¡ÂºÂ¯ng nghe trÃƒÂªn cÃ¡Â»â€¢ng: " + PORT);
+System.out/err|src/main/java/com/networkalert/DemoTcpServer.java|21|System.out.println("   NhÃ¡ÂºÂ¥n Enter hoÃ¡ÂºÂ·c gÃƒÂµ 'exit' Ã„â€˜Ã¡Â»Æ’ tÃ¡ÂºÂ¯t Server        ");
+System.out/err|src/main/java/com/networkalert/DemoTcpServer.java|22|System.out.println("==================================================");
+new Thread|src/main/java/com/networkalert/DemoTcpServer.java|26|Thread consoleThread = new Thread(() -> {
+System.out/err|src/main/java/com/networkalert/DemoTcpServer.java|29|System.out.println("[DemoTcpServer] NhÃ¡ÂºÂ­n tÃƒÂ­n hiÃ¡Â»â€¡u dÃ¡Â»Â«ng! Ã„Âang Ã„â€˜ÃƒÂ³ng server...");
+System.out/err|src/main/java/com/networkalert/DemoTcpServer.java|41|System.out.println("[DemoTcpServer] Client kÃ¡ÂºÂ¿t nÃ¡Â»â€˜i tÃ¡Â»Â«: " + clientSocket.getRemoteSocketAddress());
+new Thread|src/main/java/com/networkalert/DemoTcpServer.java|43|new Thread(() -> {
+System.out/err|src/main/java/com/networkalert/DemoTcpServer.java|52|System.err.println("[DemoTcpServer] LÃ¡Â»â€”i client: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/DemoTcpServer.java|56|System.err.println("[DemoTcpServer] KhÃƒÂ´ng thÃ¡Â»Æ’ mÃ¡Â»Å¸ cÃ¡Â»â€¢ng " + PORT + ": " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/DemoTcpServer.java|59|System.out.println("[DemoTcpServer] Server Ã„â€˜ÃƒÂ£ dÃ¡Â»Â«ng hoÃƒÂ n toÃƒÂ n!");
+System.out/err|src/main/java/com/networkalert/Main.java|39|System.out.println("======================================================================");
+System.out/err|src/main/java/com/networkalert/Main.java|40|System.out.println("HÃ¡Â»â€  THÃ¡Â»ÂNG GIÃƒÂM SÃƒÂT MÃ¡ÂºÂ NG PHÃƒâ€šN TÃƒÂN (NCAS - Network Connection Alert System)");
+System.out/err|src/main/java/com/networkalert/Main.java|41|System.out.println("======================================================================");
+System.out/err|src/main/java/com/networkalert/Main.java|42|System.out.println("CÃƒÂ¡ch sÃ¡Â»Â­ dÃ¡Â»Â¥ng:");
+System.out/err|src/main/java/com/networkalert/Main.java|43|System.out.println("  java -jar NCAS.jar                      KhÃ¡Â»Å¸i chÃ¡ÂºÂ¡y Giao diÃ¡Â»â€¡n Ã„â€˜Ã¡Â»â€œ hÃ¡Â»Âa Standalone (MÃ¡ÂºÂ·c Ã„â€˜Ã¡Â»â€¹nh)");
+System.out/err|src/main/java/com/networkalert/Main.java|44|System.out.println("  java -jar NCAS.jar server [options]     KhÃ¡Â»Å¸i chÃ¡ÂºÂ¡y MÃƒÂ¡y chÃ¡Â»Â§ Trung tÃƒÂ¢m NCAS Server");
+System.out/err|src/main/java/com/networkalert/Main.java|45|System.out.println("      --port, -p <port>                   CÃ¡Â»â€¢ng lÃ¡ÂºÂ¯ng nghe (mÃ¡ÂºÂ·c Ã„â€˜Ã¡Â»â€¹nh: 9876)");
+System.out/err|src/main/java/com/networkalert/Main.java|46|System.out.println("      --host, -h <host>                   Ã„ÂÃ¡Â»â€¹a chÃ¡Â»â€° IP lÃ¡ÂºÂ¯ng nghe (mÃ¡ÂºÂ·c Ã„â€˜Ã¡Â»â€¹nh: 0.0.0.0)");
+System.out/err|src/main/java/com/networkalert/Main.java|47|System.out.println("      --token, -t <token>                 Auth Token xÃƒÂ¡c thÃ¡Â»Â±c Agent/Console");
+System.out/err|src/main/java/com/networkalert/Main.java|48|System.out.println("  java -jar NCAS.jar agent [options]      KhÃ¡Â»Å¸i chÃ¡ÂºÂ¡y TrÃ¡ÂºÂ¡m Ã„â€˜o NCAS Agent");
+System.out/err|src/main/java/com/networkalert/Main.java|49|System.out.println("  java -jar NCAS.jar console [options]    KhÃ¡Â»Å¸i chÃ¡ÂºÂ¡y BÃƒÂ n Ã„â€˜iÃ¡Â»Âu khiÃ¡Â»Æ’n NCAS Console");
+System.out/err|src/main/java/com/networkalert/Main.java|50|System.out.println("======================================================================");
+System.out/err|src/main/java/com/networkalert/Main.java|61|System.err.println("KhÃƒÂ´ng thÃ¡Â»Æ’ khÃ¡Â»Å¸i Ã„â€˜Ã¡Â»â„¢ng FlatLaf, sÃ¡Â»Â­ dÃ¡Â»Â¥ng System Look and Feel: " + e.getMessage());
+new Thread|src/main/java/com/networkalert/Main.java|99|Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+new Thread|src/main/java/com/networkalert/console/NcasConsole.java|106|listenerThread = new Thread(this::runReadLoop, "NCAS-ConsoleReader");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|135|System.out.printf("\nÃ°Å¸â€œÂ¡ [%s STREAM] Target #%d: %s | %d ms | %s\nNCAS-Admin> ",
+now()|src/main/java/com/networkalert/console/NcasConsole.java|136|LocalDateTime.now().format(TIME_FMT),
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|144|System.out.printf("\nÃ¢Å¡Â¡ [%s FORCE-PROBE] Target #%d: %s (%d ms)\nNCAS-Admin> ",
+now()|src/main/java/com/networkalert/console/NcasConsole.java|145|LocalDateTime.now().format(TIME_FMT),
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|151|System.out.println("\n[Console] Server Ã„â€˜ÃƒÂ£ ngÃ¡ÂºÂ¯t kÃ¡ÂºÂ¿t nÃ¡Â»â€˜i: " + (disc != null ? disc.getReason() : ""));
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|156|System.out.println("\n[Console] MÃ¡ÂºÂ¥t kÃ¡ÂºÂ¿t nÃ¡Â»â€˜i tÃ¡Â»â€ºi Server: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|233|System.out.println(AsciiTableFormatter.formatAgents(agents));
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|235|System.out.println("Ã¢ÂÅ’ LÃ¡Â»â€”i: " + resp.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|238|System.out.println("Ã¢ÂÅ’ LÃ¡Â»â€”i lÃ¡ÂºÂ¥y danh sÃƒÂ¡ch Agent: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|248|System.out.println(AsciiTableFormatter.formatTargets(targets));
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|250|System.out.println("Ã¢ÂÅ’ LÃ¡Â»â€”i: " + resp.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|253|System.out.println("Ã¢ÂÅ’ LÃ¡Â»â€”i lÃ¡ÂºÂ¥y danh sÃƒÂ¡ch MÃ¡Â»Â¥c tiÃƒÂªu: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|263|System.out.println("Ã¢Å“â€¦ " + resp.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|265|System.out.println("Ã¢ÂÅ’ " + resp.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|268|System.out.println("Ã¢ÂÅ’ LÃ¡Â»â€”i gÃ¡Â»Â­i yÃƒÂªu cÃ¡ÂºÂ§u Force Check: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|275|System.out.println((resp.isSuccess() ? "Ã¢Å“â€¦ " : "Ã¢ÂÅ’ ") + resp.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|277|System.out.println("Ã¢ÂÅ’ LÃ¡Â»â€”i yÃƒÂªu cÃ¡ÂºÂ§u tÃƒÂ¡i phÃƒÂ¢n bÃ¡Â»â€¢: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|293|System.out.println("======================================================================");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|294|System.out.println("Ã°Å¸â€“Â¥Ã¯Â¸Â  THÃƒâ€NG TIN MÃƒÂY CHÃ¡Â»Â¦ TRUNG TÃƒâ€šM NCAS SERVER");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|295|System.out.println("----------------------------------------------------------------------");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|296|System.out.printf("   Ã¢â‚¬Â¢ Ã„ÂÃ¡Â»â€¹a chÃ¡Â»â€° lÃ¡ÂºÂ¯ng nghe: %s:%s\n", info.get("bindHost"), info.get("port"));
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|297|System.out.printf("   Ã¢â‚¬Â¢ ThÃ¡Â»Âi gian hoÃ¡ÂºÂ¡t Ã„â€˜Ã¡Â»â„¢ng: %02d:%02d:%02d (%d giÃƒÂ¢y)\n", h, m, s, uptime);
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|298|System.out.printf("   Ã¢â‚¬Â¢ SÃ¡Â»â€˜ Agent trÃ¡Â»Â±c tuyÃ¡ÂºÂ¿n: %s\n", info.get("activeAgents"));
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|299|System.out.printf("   Ã¢â‚¬Â¢ TÃ¡Â»â€¢ng sÃ¡Â»â€˜ mÃ¡Â»Â¥c tiÃƒÂªu quÃ¡ÂºÂ£n lÃƒÂ½: %s\n", info.get("monitoredTargets"));
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|300|System.out.printf("   Ã¢â‚¬Â¢ BÃ¡Â»â„¢ nhÃ¡Â»â€º JVM: %s MB / %s MB trÃ¡Â»â€˜ng\n", info.get("totalMemoryMb"), info.get("freeMemoryMb"));
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|301|System.out.println("======================================================================");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|303|System.out.println("Ã¢ÂÅ’ LÃ¡Â»â€”i: " + resp.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|306|System.out.println("Ã¢ÂÅ’ LÃ¡Â»â€”i lÃ¡ÂºÂ¥y thÃƒÂ´ng tin Server: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|311|System.out.println("======================================================================");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|312|System.out.println("DANH SÃƒÂCH LÃ¡Â»â€ NH Ã„ÂIÃ¡Â»â‚¬U KHIÃ¡Â»â€šN NCAS CONSOLE:");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|313|System.out.println("----------------------------------------------------------------------");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|314|System.out.println("  agents                  HiÃ¡Â»Æ’n thÃ¡Â»â€¹ bÃ¡ÂºÂ£ng danh sÃƒÂ¡ch cÃƒÂ¡c Agent Ã„â€˜ang trÃ¡Â»Â±c tuyÃ¡ÂºÂ¿n");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|315|System.out.println("  targets                 HiÃ¡Â»Æ’n thÃ¡Â»â€¹ bÃ¡ÂºÂ£ng danh sÃƒÂ¡ch mÃ¡Â»Â¥c tiÃƒÂªu Ã„â€˜o vÃƒÂ  trÃ¡ÂºÂ¡ng thÃƒÂ¡i");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|316|System.out.println("  check <targetId>        GÃ¡Â»Â­i lÃ¡Â»â€¡nh Ã„â€˜o tÃ¡Â»Â©c thÃ¡Â»Âi (Force Check) tÃ¡Â»â€ºi Agent");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|317|System.out.println("  rebalance               YÃƒÂªu cÃ¡ÂºÂ§u Server tÃƒÂ¡i cÃƒÂ¢n bÃ¡ÂºÂ±ng tÃ¡ÂºÂ£i mÃ¡Â»Â¥c tiÃƒÂªu cho Agent");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|318|System.out.println("  info, server-info       HiÃ¡Â»Æ’n thÃ¡Â»â€¹ thÃƒÂ´ng sÃ¡Â»â€˜ hoÃ¡ÂºÂ¡t Ã„â€˜Ã¡Â»â„¢ng cÃ¡Â»Â§a NCAS Server");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|319|System.out.println("  stream, watch           BÃ¡ÂºÂ­t / tÃ¡ÂºÂ¯t nhÃ¡ÂºÂ­n stream kÃ¡ÂºÂ¿t quÃ¡ÂºÂ£ Ã„â€˜o thÃ¡Â»Âi gian thÃ¡Â»Â±c");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|320|System.out.println("  clear                   XÃƒÂ³a sÃ¡ÂºÂ¡ch mÃƒÂ n hÃƒÂ¬nh console");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|321|System.out.println("  help                    Xem trÃ¡Â»Â£ giÃƒÂºp nÃƒÂ y");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|322|System.out.println("  exit, quit              ThoÃƒÂ¡t khÃ¡Â»Âi bÃƒÂ n Ã„â€˜iÃ¡Â»Âu khiÃ¡Â»Æ’n Console");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|323|System.out.println("======================================================================");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|335|System.out.print("NCAS-Admin> ");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|377|System.out.println("CÃƒÂº phÃƒÂ¡p: check <targetId>");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|383|System.out.println("Target ID phÃ¡ÂºÂ£i lÃƒÂ  sÃ¡Â»â€˜ nguyÃƒÂªn!");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|403|System.out.println("Ã¢Å“â€¦ Ã„ÂÃƒÂ£ BÃ¡ÂºÂ¬T stream sÃ¡Â»Â± kiÃ¡Â»â€¡n thÃ¡Â»Âi gian thÃ¡Â»Â±c tÃ¡Â»Â« Server (GÃƒÂµ 'stream' lÃ¡ÂºÂ§n nÃ¡Â»Â¯a Ã„â€˜Ã¡Â»Æ’ tÃ¡ÂºÂ¯t).");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|405|System.out.println("Ã¢ÂÅ’ KhÃƒÂ´ng thÃ¡Â»Æ’ Ã„â€˜Ã„Æ’ng kÃƒÂ½ stream: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|409|System.out.println("Ã¢ÂÂ¹Ã¯Â¸Â Ã„ÂÃƒÂ£ TÃ¡ÂºÂ®T stream sÃ¡Â»Â± kiÃ¡Â»â€¡n thÃ¡Â»Âi gian thÃ¡Â»Â±c.");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|415|System.out.print("\033[H\033[2J");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|420|System.out.println("LÃ¡Â»â€¡nh khÃƒÂ´ng nhÃ¡ÂºÂ­n diÃ¡Â»â€¡n Ã„â€˜Ã†Â°Ã¡Â»Â£c: '" + cmd + "'. GÃƒÂµ 'help' Ã„â€˜Ã¡Â»Æ’ xem danh sÃƒÂ¡ch.");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|427|System.out.println("======================================================================");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|428|System.out.println("Ã°Å¸Å½Â® NCAS INTERACTIVE ADMIN CONSOLE v1.0");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|429|System.out.printf("   Ã¢â‚¬Â¢ KÃ¡ÂºÂ¿t nÃ¡Â»â€˜i tÃ¡Â»â€ºi Server: %s:%d\n", config.getServerHost(), config.getServerPort());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|430|System.out.println("   Ã¢â‚¬Â¢ GÃƒÂµ 'help' Ã„â€˜Ã¡Â»Æ’ xem danh sÃƒÂ¡ch lÃ¡Â»â€¡nh, 'exit' Ã„â€˜Ã¡Â»Æ’ thoÃƒÂ¡t.");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|431|System.out.println("======================================================================");
+new Thread|src/main/java/com/networkalert/console/NcasConsole.java|452|Runtime.getRuntime().addShutdownHook(new Thread(console::disconnect, "NCAS-ConsoleShutdown"));
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|457|System.err.printf("Ã¢ÂÅ’ KhÃƒÂ´ng thÃ¡Â»Æ’ kÃ¡ÂºÂ¿t nÃ¡Â»â€˜i tÃ¡Â»â€ºi NCAS Server tÃ¡ÂºÂ¡i %s:%d: %s\n",
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|481|System.err.println("CÃƒÂº phÃƒÂ¡p: check <targetId>");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|486|System.out.println(r.getMessage() + (r.getDataJson() != null ? "\n" + r.getDataJson() : ""));
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|489|System.err.println("LÃ¡Â»â€”i thÃ¡Â»Â±c thi lÃ¡Â»â€¡nh: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|501|System.out.println("Ã°Å¸â€œÂ¡ Ã„Âang lÃ¡ÂºÂ¯ng nghe luÃ¡Â»â€œng sÃ¡Â»Â± kiÃ¡Â»â€¡n thÃ¡Â»Âi gian thÃ¡Â»Â±c... (BÃ¡ÂºÂ¥m Ctrl + C Ã„â€˜Ã¡Â»Æ’ dÃ¡Â»Â«ng)");
+System.out/err|src/main/java/com/networkalert/console/NcasConsole.java|505|System.err.println("LÃ¡Â»â€”i stream: " + e.getMessage());
+currentTimeMillis|src/main/java/com/networkalert/legacy/MainFrame.java|655|chooser.setSelectedFile(new File("BaoCao_GiamSatMang_" + System.currentTimeMillis() + ".csv"));
+new Thread|src/main/java/com/networkalert/legacy/SettingsDialog.java|348|new Thread(() -> {
+new Thread|src/main/java/com/networkalert/legacy/SettingsDialog.java|379|new Thread(() -> {
+new Thread|src/main/java/com/networkalert/legacy/SettingsDialog.java|407|new Thread(() -> {
+now()|src/main/java/com/networkalert/model/CheckResult.java|21|this.timestamp = LocalDateTime.now();
+currentTimeMillis|src/main/java/com/networkalert/model/RealNetworkInfo.java|23|private long lastUpdated = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/model/ServerTarget.java|170|stationLastCheckTimes.put(stationId, System.currentTimeMillis());
+now()|src/main/java/com/networkalert/model/ServerTarget.java|213|this.lastCheckTime = LocalDateTime.now();
+currentTimeMillis|src/main/java/com/networkalert/model/ServerTarget.java|233|System.currentTimeMillis(),
+currentTimeMillis|src/main/java/com/networkalert/model/ServerTarget.java|289|System.currentTimeMillis(),
+currentTimeMillis|src/main/java/com/networkalert/model/ServerTarget.java|301|long currentMinute = System.currentTimeMillis() / 60000;
+now()|src/main/java/com/networkalert/model/ServerTarget.java|305|this.lastStatusChangeTime = LocalDateTime.now();
+currentTimeMillis|src/main/java/com/networkalert/model/ServerTarget.java|348|long nowMinute = System.currentTimeMillis() / 60000;
+now()|src/main/java/com/networkalert/model/ServerTarget.java|374|java.time.Duration d = java.time.Duration.between(start, LocalDateTime.now());
+currentTimeMillis|src/main/java/com/networkalert/model/TargetStateMachine.java|101|this(targetId, targetName, fromStatus, toStatus, stateType, currentAttempt, maxAttempts, hardTransition, flapping, checkResult, description, System.currentTimeMillis());
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/AssignTargetsMessage.java|14|this.timestamp = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/AssignTargetsMessage.java|19|this.timestamp = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/ConsoleCommand.java|15|this.timestamp = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/ConsoleCommand.java|20|this.timestamp = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/ConsoleCommand.java|26|this.timestamp = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/DisconnectMessage.java|12|this.timestamp = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/DisconnectMessage.java|18|this.timestamp = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/ForceCheckRequest.java|12|this.requestedAt = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/ForceCheckRequest.java|18|this.requestedAt = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/HeartbeatPing.java|25|return new HeartbeatPing(agentId, System.currentTimeMillis(), activeTasks, 0.0, freeMem);
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/HeartbeatPong.java|18|return new HeartbeatPong(System.currentTimeMillis(), "OK");
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/RegisterResponse.java|30|return new RegisterResponse("ACCEPTED", sessionId, heartbeatIntervalSec, System.currentTimeMillis(), msg, null);
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/RegisterResponse.java|34|return new RegisterResponse("ACCEPTED", sessionId, heartbeatIntervalSec, System.currentTimeMillis(), msg, dedicatedSecret);
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/RegisterResponse.java|38|return new RegisterResponse("REJECTED", null, 0, System.currentTimeMillis(), msg, null);
+currentTimeMillis|src/main/java/com/networkalert/protocol/messages/ReportResultMessage.java|37|System.currentTimeMillis(),
+System.out/err|src/main/java/com/networkalert/repository/ConfigRepository.java|93|System.err.println("[ConfigRepository] LÃ¡Â»â€”i tÃ¡ÂºÂ£i cÃ¡ÂºÂ¥u hÃƒÂ¬nh tÃ¡Â»Â« SQL Server: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/repository/ConfigRepository.java|136|System.err.println("[ConfigRepository] LÃ¡Â»â€”i lÃ†Â°u cÃ¡ÂºÂ¥u hÃƒÂ¬nh vÃƒÂ o SQL Server: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/repository/IncidentRepository.java|50|System.err.println("[IncidentRepository] LÃ¡Â»â€”i lÃ†Â°u incident vÃƒÂ o SQL Server: " + e.getMessage());
+now()|src/main/java/com/networkalert/repository/IncidentRepository.java|61|LocalDateTime now = LocalDateTime.now();
+System.out/err|src/main/java/com/networkalert/repository/IncidentRepository.java|84|System.err.println("[IncidentRepository] LÃ¡Â»â€”i cÃ¡ÂºÂ­p nhÃ¡ÂºÂ­t thÃ¡Â»Âi lÃ†Â°Ã¡Â»Â£ng sÃ¡Â»Â± cÃ¡Â»â€˜: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/repository/IncidentRepository.java|122|System.err.println("[IncidentRepository] LÃ¡Â»â€”i lÃ¡ÂºÂ¥y incident tÃ¡Â»Â« SQL Server: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/repository/IncidentRepository.java|138|System.err.println("[IncidentRepository] LÃ¡Â»â€”i xÃƒÂ³a incident: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/repository/TargetRepository.java|123|System.err.println("[TargetRepository] LÃ¡Â»â€”i Ã„â€˜Ã¡Â»Âc targets tÃ¡Â»Â« SQL Server: " + ex.getMessage());
+System.out/err|src/main/java/com/networkalert/repository/TargetRepository.java|227|System.err.println("[TargetRepository] LÃ¡Â»â€”i thÃƒÂªm target vÃƒÂ o SQL Server: " + ex.getMessage());
+System.out/err|src/main/java/com/networkalert/repository/TargetRepository.java|278|System.err.println("[TargetRepository] LÃ¡Â»â€”i cÃ¡ÂºÂ­p nhÃ¡ÂºÂ­t target trong SQL Server: " + ex.getMessage());
+System.out/err|src/main/java/com/networkalert/repository/TargetRepository.java|300|System.err.println("[TargetRepository] LÃ¡Â»â€”i xÃƒÂ³a target trong SQL Server: " + e.getMessage());
+new Thread|src/main/java/com/networkalert/scanner/PortScannerService.java|65|new Thread(() -> {
+new Thread|src/main/java/com/networkalert/server/AgentManager.java|119|Thread t = new Thread(r, "NCAS-HeartbeatScanner");
+new Thread|src/main/java/com/networkalert/service/MonitorService.java|40|Thread t = new Thread(r);
+new Thread|src/main/java/com/networkalert/service/RealNetworkService.java|23|Thread t = new Thread(r, "RealNetworkService-Poller");
+currentTimeMillis|src/main/java/com/networkalert/service/RealNetworkService.java|150|if (System.currentTimeMillis() - lastPublicIpCheck > 60_000 || cachedInfo.getPublicIp().contains("Ã„Âang")) {
+currentTimeMillis|src/main/java/com/networkalert/service/RealNetworkService.java|163|cachedInfo.setLastUpdated(System.currentTimeMillis());
+new Thread|src/main/java/com/networkalert/service/RealNetworkService.java|247|new Thread(() -> {
+currentTimeMillis|src/main/java/com/networkalert/service/RealNetworkService.java|260|lastPublicIpCheck = System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/service/checker/HttpChecker.java|92|long diffMs = notAfter.getTime() - System.currentTimeMillis();
+currentTimeMillis|src/main/java/com/networkalert/service/checker/PushChecker.java|28|long elapsedSec = (System.currentTimeMillis() - lastPush) / 1000;
+currentTimeMillis|src/main/java/com/networkalert/service/checker/UdpChecker.java|26|byte[] sendData = ("PING_UDP_" + System.currentTimeMillis()).getBytes(StandardCharsets.UTF_8);
+System.out/err|src/main/java/com/networkalert/simulator/MockHttpServer.java|37|System.out.println("[MockHttpServer] Ã„Âang chÃ¡ÂºÂ¡y trÃƒÂªn cÃ¡Â»â€¢ng HTTP " + port);
+System.out/err|src/main/java/com/networkalert/simulator/MockHttpServer.java|40|System.err.println("[MockHttpServer] LÃ¡Â»â€”i khÃ¡Â»Å¸i Ã„â€˜Ã¡Â»â„¢ng HTTP Server trÃƒÂªn cÃ¡Â»â€¢ng " + port + ": " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/simulator/MockHttpServer.java|50|System.out.println("[MockHttpServer] Ã„ÂÃƒÂ£ dÃ¡Â»Â«ng trÃƒÂªn cÃ¡Â»â€¢ng HTTP " + port);
+currentTimeMillis|src/main/java/com/networkalert/simulator/MockHttpServer.java|88|String responseBody = "{\"status\": " + code + ", \"message\": \"Mock HTTP Server Response\", \"time\": " + System.currentTimeMillis() + "}";
+new Thread|src/main/java/com/networkalert/simulator/MockTcpServer.java|29|listenerThread = new Thread(this::listenLoop, "MockTcpServer-" + port);
+System.out/err|src/main/java/com/networkalert/simulator/MockTcpServer.java|32|System.out.println("[MockTcpServer] Ã„Âang chÃ¡ÂºÂ¡y trÃƒÂªn cÃ¡Â»â€¢ng TCP " + port);
+System.out/err|src/main/java/com/networkalert/simulator/MockTcpServer.java|35|System.err.println("[MockTcpServer] LÃ¡Â»â€”i khÃ¡Â»Å¸i Ã„â€˜Ã¡Â»â„¢ng trÃƒÂªn cÃ¡Â»â€¢ng " + port + ": " + e.getMessage());
+new Thread|src/main/java/com/networkalert/simulator/MockTcpServer.java|52|Thread worker = new Thread(() -> {
+System.out/err|src/main/java/com/networkalert/simulator/MockTcpServer.java|78|System.out.println("[MockTcpServer] Ã„ÂÃƒÂ£ dÃ¡Â»Â«ng trÃƒÂªn cÃ¡Â»â€¢ng " + port);
+new Thread|src/main/java/com/networkalert/simulator/MockUdpServer.java|27|listenerThread = new Thread(this::listenLoop, "MockUdpServer-" + port);
+System.out/err|src/main/java/com/networkalert/simulator/MockUdpServer.java|30|System.out.println("[MockUdpServer] Ã„Âang chÃ¡ÂºÂ¡y trÃƒÂªn cÃ¡Â»â€¢ng UDP " + port);
+System.out/err|src/main/java/com/networkalert/simulator/MockUdpServer.java|33|System.err.println("[MockUdpServer] LÃ¡Â»â€”i khÃ¡Â»Å¸i Ã„â€˜Ã¡Â»â„¢ng trÃƒÂªn cÃ¡Â»â€¢ng " + port + ": " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/simulator/MockUdpServer.java|65|System.out.println("[MockUdpServer] Ã„ÂÃƒÂ£ dÃ¡Â»Â«ng trÃƒÂªn cÃ¡Â»â€¢ng " + port);
+currentTimeMillis|src/main/java/com/networkalert/ui/MainFrame.java|634|chooser.setSelectedFile(new File("BaoCao_GiamSatMang_" + System.currentTimeMillis() + ".csv"));
+now()|src/main/java/com/networkalert/ui/MaintenanceDialog.java|281|LocalDateTime now = LocalDateTime.now();
+new Thread|src/main/java/com/networkalert/ui/SettingsDialog.java|382|new Thread(() -> {
+new Thread|src/main/java/com/networkalert/ui/SettingsDialog.java|431|new Thread(() -> {
+new Thread|src/main/java/com/networkalert/ui/SettingsDialog.java|461|new Thread(() -> {
+new Thread|src/main/java/com/networkalert/ui/SettingsDialog.java|514|new Thread(() -> {
+currentTimeMillis|src/main/java/com/networkalert/ui/components/AgentClusterPanel.java|412|long lastSec = (System.currentTimeMillis() - a.getLastHeartbeatTime()) / 1000;
+currentTimeMillis|src/main/java/com/networkalert/ui/components/ServerTableRenderer.java|34|flashTimestamps.put(targetId, System.currentTimeMillis());
+currentTimeMillis|src/main/java/com/networkalert/ui/components/ServerTableRenderer.java|72|long diff = System.currentTimeMillis() - flashTimestamps.get(target.getId());
+now()|src/main/java/com/networkalert/ui/components/ServerTableRenderer.java|405|Duration d = Duration.between(time, LocalDateTime.now());
+System.out/err|src/main/java/com/networkalert/ui/theme/I18n.java|27|System.err.println("KhÃƒÂ´ng thÃ¡Â»Æ’ nÃ¡ÂºÂ¡p ResourceBundle messages_vi: " + e.getMessage());
+System.out/err|src/main/java/com/networkalert/ui/theme/ThemeManager.java|183|System.err.println("KhÃƒÂ´ng thÃ¡Â»Æ’ nÃ¡ÂºÂ¡p icon: icons/" + name + ".svg (" + e.getMessage() + ")");
+now()|src/main/java/com/networkalert/util/LoggerUtil.java|69|String timestamp = LocalDateTime.now().format(FORMATTER);
+System.out/err|src/main/java/com/networkalert/util/LoggerUtil.java|74|System.err.println(logLine);
+System.out/err|src/main/java/com/networkalert/util/LoggerUtil.java|76|System.out.println(logLine);
+System.out/err|src/main/java/com/networkalert/util/LoggerUtil.java|84|System.err.println("KhÃƒÂ´ng thÃ¡Â»Æ’ ghi vÃƒÂ o log file: " + e.getMessage());
+new Thread|src/main/java/com/networkalert/util/SoundHelper.java|11|new Thread(() -> {
+new Thread|src/main/java/com/networkalert/util/SoundHelper.java|23|new Thread(() -> {
+new Thread|src/main/java/com/networkalert/util/SoundHelper.java|33|new Thread(() -> {
+new Thread|src/main/java/com/networkalert/agent/NcasAgent.java|128|Thread t = new Thread(r, " NCAS-AgentMonitor-\ + MONITOR_THREAD_COUNTER.getAndIncrement());
+new Thread|src/main/java/com/networkalert/agent/NcasAgent.java|134|Thread t = new Thread(r, \NCAS-AgentHeartbeat\);
+new Thread|src/main/java/com/networkalert/agent/NcasAgent.java|171|networkThread = new Thread(this::runConnectionLoop, \NCAS-AgentNetworkLoop\);
+new Thread|src/main/java/com/networkalert/agent/NcasAgent.java|799|Runtime.getRuntime().addShutdownHook(new Thread(agent::stop, \NCAS-AgentShutdownHook\));
+new Thread|src/main/java/com/networkalert/server/NcasServer.java|144|Thread t = new Thread(r, \NCAS-ClientWorker-\ + WORKER_THREAD_COUNTER.getAndIncrement());
+new Thread|src/main/java/com/networkalert/server/NcasServer.java|150|Thread t = new Thread(r, \NCAS-ServerMaintenance\);
+new Thread|src/main/java/com/networkalert/server/NcasServer.java|260|Thread acceptThread = new Thread(this::runAcceptLoop, \NCAS-AcceptLoop\);
+new Thread|src/main/java/com/networkalert/server/NcasServer.java|1054|Runtime.getRuntime().addShutdownHook(new Thread(() -> {
