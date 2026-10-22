@@ -1,0 +1,11 @@
+<service>
+  <id>NetworkConnectionAlertSystem</id>
+  <name>Network Connection Alert System (NCAS)</name>
+  <description>Dịch vụ giám sát và cảnh báo kết nối mạng tự động 24/7 (Đồ án Mạng máy tính)</description>
+  <executable>java</executable>
+  <arguments>-Dfile.encoding=UTF-8 -jar "%BASE%\..\target\NetworkConnectionAlertSystem-1.0.0-standalone.jar"</arguments>
+  <logmode>rotate</logmode>
+  <logpath>%BASE%\logs</logpath>
+  <startmode>Automatic</startmode>
+  <delayedAutoStart>true</delayedAutoStart>
+</service>
