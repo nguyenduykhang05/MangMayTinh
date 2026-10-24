@@ -127,3 +127,5 @@ Chế độ `--no-tls` chỉ phục vụ môi trường phòng thí nghiệm (La
 | `SSLHandshakeException: no cipher suites in common` hoặc `Received fatal alert: protocol_version` | Client cố kết nối bằng phiên bản TLS $\le 1.1$. | Nâng cấp môi trường JRE lên Java 17+ và đảm bảo client hỗ trợ TLS 1.2 hoặc TLS 1.3. |
 | `AUTH_FAIL: Kênh TLS yêu cầu gửi Auth Token trong thông điệp đăng ký!` | Agent kết nối qua TLS nhưng không khai báo `--token`. | Truyền `--token <SECRET>` khi khởi chạy Agent hoặc đăng ký token mới qua lệnh `ncas-server token create <agentId>`. |
 | Agent chuyển sang backoff cố định $\ge 60$ giây (`AuthConfigurationException`) | Sai token xác thực hoặc Fingerprint không khớp (ADR-11). | Kiểm tra và sửa cấu hình token hoặc fingerprint; Agent sẽ thử lại sau ít nhất 60 giây. |
+
+<!-- Ki?m tra x�c th?c TLS 1.3 v� SHA-256 Pinning ho�n t?t -->
