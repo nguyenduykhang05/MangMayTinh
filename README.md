@@ -1,4 +1,4 @@
-# ỨNG DỤNG GIÁM SÁT VÀ CẢNH BÁO KẾT NỐI MẠNG (NETWORK CONNECTION ALERT SYSTEM)
+﻿# ỨNG DỤNG GIÁM SÁT VÀ CẢNH BÁO KẾT NỐI MẠNG (NETWORK CONNECTION ALERT SYSTEM)
 **ĐỒ ÁN CUỐI KỲ: LẬP TRÌNH MẠNG / MẠNG MÁY TÍNH**
 
 ---
@@ -228,8 +228,8 @@ Bảng thống kê trách nhiệm, phạm vi công việc và các Merge Request
 
 | MSSV | Họ và Tên | Công việc đã thực hiện | Merge Requests |
 |:---|:---|:---|:---|
-| **2380600986** | **Nguyễn Duy Khang** *(Trưởng nhóm)* | Xây dựng lõi giao thức phân tán nhị phân **NCAS-P v1/v1.1**, đồng bộ phân phối mục tiêu **TargetDistributor**, cơ chế **Store-and-Forward** trên Agent, tích hợp hạ tầng khám phá mạng LAN thật và đồng bộ thời gian chuẩn **Clock injection**. | !1, !5, !9 |
-| **2380600583** | **Vũ Thị Hạnh** | Thiết kế tầng trừu tượng CSDL **DatabaseBackend** (H2 file / SQL Server), công cụ tự động migration **SchemaMigrationEngine**, pipeline ghi bất đồng bộ **JdbcResultSink**, thiết lập bộ quy tắc kiểm định kiến trúc **Architecture Ratchet** và bảo mật bảng điều khiển Web NOC. | !2, !6, !10 |
-| **2380600508** | **Trần Nam Định** | Hiện thực các bộ đo giao thức mạng **Checkers** (ICMP ping hệ điều hành, TCP 3-way, UDP echo, DNS RFC 1035, HTTP/HTTPS), bảo mật kênh truyền **TLS 1.3** và xác thực mã vân tay chứng chỉ **SHA-256 Pinning**, chẩn đoán đường truyền **Path Diagnosis**. | !3, !7, !11 |
-| **2380601430** | **Biện Khắc Mẫn Nghi** | Thiết kế và hoàn thiện toàn bộ giao diện máy trạm **Java Swing FlatLaf** độ phân giải cao (High-DPI), bố cục chống tràn **No-Overlap Card Layout**, xây dựng kịch bản kiểm thử hỗn loạn **TcpFaultProxy** và hệ thống lab container **Docker Compose**. | !4, !8, !12 |
+| **2380600986** | **Nguyễn Duy Khang** *(Trưởng nhóm)* | Xây dựng lõi giao thức phân tán nhị phân **NCAS-P v1/v1.1**, đồng bộ phân phối mục tiêu **TargetDistributor**, cơ chế **Store-and-Forward** trên Agent, tích hợp hạ tầng khám phá mạng LAN thật và đồng bộ thời gian chuẩn **Clock injection**. | #1, #5, #9 (PR #13) |
+| **2380600583** | **Vũ Thị Hạnh** | Thiết kế tầng trừu tượng CSDL **DatabaseBackend** (H2 file / SQL Server), công cụ tự động migration **SchemaMigrationEngine**, pipeline ghi bất đồng bộ **JdbcResultSink**, thiết lập bộ quy tắc kiểm định kiến trúc **Architecture Ratchet** và bảo mật bảng điều khiển Web NOC. | #2, #6, #10 (PR #14) |
+| **2380600508** | **Trần Nam Định** | Hiện thực các bộ đo giao thức mạng **Checkers** (ICMP ping hệ điều hành, TCP 3-way, UDP echo, DNS RFC 1035, HTTP/HTTPS), bảo mật kênh truyền **TLS 1.3** và xác thực mã vân tay chứng chỉ **SHA-256 Pinning**, chẩn đoán đường truyền **Path Diagnosis**. | #3, #7, #11 (PR #15) |
+| **2380601430** | **Biện Khắc Mẫn Nghi** | Thiết kế và hoàn thiện toàn bộ giao diện máy trạm **Java Swing FlatLaf** độ phân giải cao (High-DPI), bố cục chống tràn **No-Overlap Card Layout**, xây dựng kịch bản kiểm thử hỗn loạn **TcpFaultProxy** và hệ thống lab container **Docker Compose**. | #4, #8, #12 (PR #16) |
 
