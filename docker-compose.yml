@@ -1,0 +1,165 @@
+services:
+  # ============================================================================
+  # 1. MÁY CHỦ TRUNG TÂM (NCAS SERVER + WEB NOC DASHBOARD)
+  # ============================================================================
+  ncas-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ncas-server
+    restart: unless-stopped
+    ports:
+      - "9876:9876"  # Cổng giao thức phân tán NCAS-P
+      - "8080:8080"  # Cổng giao diện Web NOC Dashboard
+    networks:
+      management_net:
+        ipv4_address: 172.28.0.10
+    environment:
+      - NCAS_PORT=9876
+      - NCAS_TOKEN=secret_lab_token_nat_2026
+    command: ["server", "--port", "9876", "--token", "secret_lab_token_nat_2026", "--no-tls"]
+    volumes:
+      - server_data:/app/data
+
+  # ============================================================================
+  # 2. CHI NHÁNH 1 (BRANCH 1) - SAU ROUTER NAT MASQUERADE
+  # ============================================================================
+  branch1-router:
+    image: alpine:3.20
+    container_name: branch1-router
+    cap_add:
+      - NET_ADMIN
+    networks:
+      management_net:
+        ipv4_address: 172.28.0.21
+      branch1_net:
+        ipv4_address: 10.10.1.1
+    volumes:
+      - ./docker/router-entrypoint.sh:/entrypoint.sh:ro
+    entrypoint: ["/bin/sh", "/entrypoint.sh"]
+
+  branch1-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: branch1-agent
+    depends_on:
+      - ncas-server
+      - branch1-router
+    cap_add:
+      - NET_RAW
+    networks:
+      branch1_net:
+        ipv4_address: 10.10.1.100
+    environment:
+      - NCAS_SERVER_HOST=172.28.0.10
+      - NCAS_SERVER_PORT=9876
+      - NCAS_AGENT_ID=agent-branch-1
+      - NCAS_TOKEN=secret_lab_token_nat_2026
+    command: ["agent", "--server-host", "172.28.0.10", "--server-port", "9876", "--agent-id", "agent-branch-1", "--token", "secret_lab_token_nat_2026", "--no-tls"]
+
+  branch1-simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: branch1-simulator
+    networks:
+      branch1_net:
+        ipv4_address: 10.10.1.200
+    command: ["scenario", "/app/scenarios/demo.json"]
+
+  # ============================================================================
+  # 3. CHI NHÁNH 2 (BRANCH 2) - KẾT NỐI QUA FAULT PROXY ĐỂ INJECT CHAOS
+  # ============================================================================
+  branch2-router:
+    image: alpine:3.20
+    container_name: branch2-router
+    cap_add:
+      - NET_ADMIN
+    networks:
+      management_net:
+        ipv4_address: 172.28.0.22
+      branch2_net:
+        ipv4_address: 10.10.2.1
+    volumes:
+      - ./docker/router-entrypoint.sh:/entrypoint.sh:ro
+    entrypoint: ["/bin/sh", "/entrypoint.sh"]
+
+  fault-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fault-proxy
+    depends_on:
+      - ncas-server
+    networks:
+      management_net:
+        ipv4_address: 172.28.0.30
+    ports:
+      - "9877:9877"
+    command: ["fault-proxy", "--listen-port", "9877", "--target-host", "172.28.0.10", "--target-port", "9876"]
+
+  branch2-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: branch2-agent
+    depends_on:
+      - fault-proxy
+      - branch2-router
+    cap_add:
+      - NET_RAW
+    networks:
+      branch2_net:
+        ipv4_address: 10.10.2.100
+    environment:
+      - NCAS_SERVER_HOST=172.28.0.30
+      - NCAS_SERVER_PORT=9877
+      - NCAS_AGENT_ID=agent-branch-2
+      - NCAS_TOKEN=secret_lab_token_nat_2026
+    command: ["agent", "--server-host", "172.28.0.30", "--server-port", "9877", "--agent-id", "agent-branch-2", "--token", "secret_lab_token_nat_2026", "--no-tls"]
+
+  branch2-simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: branch2-simulator
+    networks:
+      branch2_net:
+        ipv4_address: 10.10.2.200
+    command: ["scenario", "/app/scenarios/demo.json"]
+
+  # ============================================================================
+  # 4. SIDECAR GHI GÓI TIN MẠNG PCAP PHỤC VỤ PHÂN TÍCH WIRESHARK (Tùy chọn)
+  # ============================================================================
+  tcpdump-sidecar:
+    image: corfr/tcpdump
+    container_name: tcpdump-sidecar
+    depends_on:
+      - ncas-server
+    networks:
+      management_net:
+        ipv4_address: 172.28.0.99
+    volumes:
+      - ./pcap:/pcap
+    command: ["-i", "eth0", "-n", "-s0", "-w", "/pcap/ncas_nat_lab.pcap", "port", "9876", "or", "port", "9877"]
+
+networks:
+  management_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/24
+  branch1_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.1.0/24
+  branch2_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.2.0/24
+
+volumes:
+  server_data:
